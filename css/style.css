@@ -53,8 +53,6 @@ nav a[aria-current="page"] {
     color: #00274C;
 }
 
-/* MAIN CONTENT */
-
 main {
     width: 90%;
     max-width: 70rem;
@@ -80,8 +78,6 @@ p {
     font-size: 16px;
 }
 
-/* CONTENT SECTIONS */
-
 section {
     margin-bottom: 30px;
 }
@@ -93,9 +89,6 @@ article {
     border-left: 5px solid #FFCB05;
 }
 
-
-/* LINKS */
-
 main a {
     color: #005A9C;
     text-decoration: underline;
@@ -105,15 +98,11 @@ main a:hover {
     color: #00274C;
 }
 
-/* IMAGES */
-
 main img {
     width: 100%;
     max-width: 25rem;
     height: auto;
 }
-
-/* VIDEOS */
 
 iframe {
     max-width: 100%;
@@ -122,8 +111,6 @@ iframe {
     height: auto;
     border: 0;
 }
-
-/* FOOTER */
 
 footer {
     background-color: #00274C;
@@ -136,30 +123,24 @@ footer a {
     color: white;
 }
 
-/* ACCESSIBILITY */
-
 a:focus-visible {
     outline: 3px solid #FFCB05;
     outline-offset: 3px;
 }
 
-/* SKIP TO MAIN CONTENT */
-
 a[href="#main"] {
     position: absolute;
     left: -9999px;
+    background-color: #FFCB05;
+    color: #00274C;
+    padding: 0.75rem;
 }
 
 a[href="#main"]:focus {
     left: 10px;
     top: 10px;
-    background-color: #FFCB05;
-    color: #00274C;
-    padding: 10px;
     z-index: 10;
 }
-
-/* GRID LAYOUT FOR CONTENT CARDS */
 
 .card-grid {
     display: grid;
@@ -167,15 +148,13 @@ a[href="#main"]:focus {
     gap: 1rem;
 }
 
-/* Keep section headings and descriptions full width */
-
 .card-grid > h2,
 .card-grid > p {
     grid-column: 1 / -1;
 }
 
-/* Remove extra spacing between cards */
-
 .card-grid > article {
     margin-bottom: 0;
 }
+
+/* I used ai to find the # for colors */
