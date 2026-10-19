@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #000000;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #00274C;
+    color: white;
+    padding: 20px;
+}
+
+header img {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: 0.75rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: block;
+    background-color: #00274C;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border: 2px solid #FFCB05;
+}
+
+nav a:hover {
+    background-color: #FFCB05;
+    color: #00274C;
+}
+
+nav a[aria-current="page"] {
+    background-color: #FFCB05;
+    color: #00274C;
+}
+
+/* MAIN CONTENT */
+
+main {
+    width: 90%;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    color: #00274C;
+    font-size: 26px;
+}
+
+h3 {
+    color: #00274C;
+    font-size: 22px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* CONTENT SECTIONS */
+
+section {
+    margin-bottom: 30px;
+}
+
+article {
+    background-color: #F5F5F5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #FFCB05;
+}
+
+
+/* LINKS */
+
+main a {
+    color: #005A9C;
+    text-decoration: underline;
+}
+
+main a:hover {
+    color: #00274C;
+}
+
+/* IMAGES */
+
+main img {
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+}
+
+/* VIDEOS */
+
+iframe {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #00274C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}
+
+/* ACCESSIBILITY */
+
+a:focus-visible {
+    outline: 3px solid #FFCB05;
+    outline-offset: 3px;
+}
+
+/* SKIP TO MAIN CONTENT */
+
+a[href="#main"] {
+    position: absolute;
+    left: -9999px;
+}
+
+a[href="#main"]:focus {
+    left: 10px;
+    top: 10px;
+    background-color: #FFCB05;
+    color: #00274C;
+    padding: 10px;
+    z-index: 10;
+}
+
+/* GRID LAYOUT FOR CONTENT CARDS */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 1rem;
+}
+
+/* Keep section headings and descriptions full width */
+
+.card-grid > h2,
+.card-grid > p {
+    grid-column: 1 / -1;
+}
+
+/* Remove extra spacing between cards */
+
+.card-grid > article {
+    margin-bottom: 0;
+}
